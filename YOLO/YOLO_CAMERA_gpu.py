@@ -1,0 +1,50 @@
+from ultralytics import YOLO
+import cv2
+import time
+import torch
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+model = YOLO("yolov8n.pt")
+model.to(DEVICE)
+
+cap = cv2.VideoCapture(0)
+
+fps_list = []
+
+while True:
+    start = time.perf_counter()
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    results = model(frame, stream=True)
+    for r in results:
+        frame = r.plot()
+
+    if DEVICE == "cuda":
+        torch.cuda.synchronize()
+
+    end = time.perf_counter()
+    fps = 1 / (end - start)
+    fps_list.append(fps)
+
+    cv2.putText(
+        frame,
+        f"GPU | FPS: {fps:.2f}",
+        (20, 40),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1,
+        (0, 255, 0),
+        2
+    )
+
+    cv2.imshow("YOLO CAMERA GPU", frame)
+
+    if cv2.waitKey(1) & 0xFF == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
+print("FPS médio:", sum(fps_list) / len(fps_list))
