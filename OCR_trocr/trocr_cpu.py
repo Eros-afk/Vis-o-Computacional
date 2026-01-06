@@ -5,7 +5,7 @@ import time
 import os
 
 # ===== CONFIG =====
-IMG_PATH = "data/imagens/img.jpeg"
+IMG_PATH = "data/imagens/image.png"
 OUT_PATH = "resultados/ocr_trocr_cpu.txt"
 DEVICE = "cpu"
 
