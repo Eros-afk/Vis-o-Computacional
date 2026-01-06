@@ -5,7 +5,7 @@ import cv2
 model = YOLO("yolov8n.pt")
 
 # Lê imagem
-img = cv2.imread("imagem.jpg")
+img = cv2.imread("Su57.jpg")
 
 print(img is None)
 
