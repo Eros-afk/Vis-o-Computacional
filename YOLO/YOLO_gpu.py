@@ -6,7 +6,7 @@ import torch
 
 # ===== CONFIG =====
 IMG_PATH = "data/imagens/Su57.jpg"
-OUT_PATH = "resultados/yolo_gpu.jpg"
+OUT_PATH = "YOLO/resultados/yolo_gpu.jpg"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 os.makedirs("resultados", exist_ok=True)

@@ -6,7 +6,7 @@ import torch
 
 # ===== CONFIG =====
 IMG_PATH = "data/imagens/Su57.jpg"
-OUT_PATH = "resultados/yolo_cpu.jpg"
+OUT_PATH = "YOLO/resultados/yolo_cpu.jpg"
 DEVICE = "cpu"
 
 os.makedirs("resultados", exist_ok=True)

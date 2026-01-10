@@ -5,8 +5,8 @@ import time
 import os
 
 # ===== CONFIG =====
-IMG_PATH = "data/imagens/img.jpeg"
-OUT_PATH = "resultados/ocr_trocr_gpu.txt"
+IMG_PATH = "data/imagens/img1.jpeg"
+OUT_PATH = "OCR_trocr/resultados/ocr_trocr_gpu.txt"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 os.makedirs("resultados", exist_ok=True)

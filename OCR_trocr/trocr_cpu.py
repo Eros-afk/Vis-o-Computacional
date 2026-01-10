@@ -5,8 +5,8 @@ import time
 import os
 
 # ===== CONFIG =====
-IMG_PATH = "data/imagens/image.png"
-OUT_PATH = "resultados/ocr_trocr_cpu.txt"
+IMG_PATH = "data/imagens/img1.jpeg"
+OUT_PATH = "OCR_trocr/resultados/ocr_trocr_cpu.txt"
 DEVICE = "cpu"
 
 os.makedirs("resultados", exist_ok=True)
