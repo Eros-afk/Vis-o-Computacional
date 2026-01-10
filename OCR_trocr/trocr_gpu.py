@@ -9,7 +9,7 @@ IMG_PATH = "data/imagens/img1.jpeg"
 OUT_PATH = "OCR_trocr/resultados/ocr_trocr_gpu.txt"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-os.makedirs("resultados", exist_ok=True)
+os.makedirs("OCR_trocr/resultados", exist_ok=True)
 
 # ===== MODELO =====
 processor = TrOCRProcessor.from_pretrained(

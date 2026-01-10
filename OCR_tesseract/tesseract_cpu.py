@@ -5,12 +5,11 @@ import os
 
 # ===== CONFIG =====
 IMG_PATH = "data/imagens/img.jpeg"
-OUT_PATH = "resultados/ocr_tesseract_cpu.txt"
+OUT_PATH = "OCR_tesseract/resultados/ocr_tesseract_cpu.txt"
 DEVICE = "cpu"
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-os.makedirs("resultados", exist_ok=True)
-
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+os.makedirs("OCR_tesseract/resultados", exist_ok=True)
 # ===== EXECUÇÃO =====
 start = time.perf_counter()
 

@@ -9,7 +9,7 @@ IMG_PATH = "data/imagens/Su57.jpg"
 OUT_PATH = "YOLO/resultados/yolo_gpu.jpg"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-os.makedirs("resultados", exist_ok=True)
+os.makedirs("YOLO/resultados", exist_ok=True)
 
 # ===== MODELO =====
 model = YOLO("yolov8n.pt")
